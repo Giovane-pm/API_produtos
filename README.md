@@ -20,11 +20,11 @@ Ela realiza operações **CRUD** (Criar, Ler, Atualizar e Deletar) integradas co
 
 ### 1. Clonar o repositório  
 ```bash
-git clone https://github.com/seuusuario/DESAFIO_BACK_ASCII_GIOVANE-PEREIRA-MENDES.git
+git clone https://github.com/Giovane-pm/API_produtos.git
 ```
 
 ### 2. Instalar as dependências  
-```bash
+```cmd
 npm init -y
 npm install express sequelize mysql2 dotenv
 ```
@@ -37,7 +37,7 @@ Exemplo de configuração padrão:
 ```
 DB_HOST=localhost
 DB_USER=root
-DB_PASS=
+DB_PASS=123456
 DB_NAME=produtos
 DB_PORT=3306
 PORT=4000
