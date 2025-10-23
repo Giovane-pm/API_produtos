@@ -30,8 +30,7 @@ npm install express sequelize mysql2 dotenv
 ```
 
 ### 3. Configurar as variáveis de ambiente  
-O arquivo **.env** já está criado no projeto.  
-O usuário **deve apenas ajustar os valores** conforme o seu ambiente local (ex.: usuário e senha do MySQL).  
+Crie um arquivo .env na raiz do projeto com o seguinte conteúdo (ajuste conforme seu ambiente):
 
 Exemplo de configuração padrão:
 ```
