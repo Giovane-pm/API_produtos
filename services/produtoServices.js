@@ -9,13 +9,17 @@ export async function buscarProduto() {
 }
 
 export async function pesquisarProduto(id) {
+    const pesquisarProduto = await Produto.findByPk(id);
+    if (!pesquisarProduto) throw new Error("Produto não encontrado");
     return await Produto.findByPk(id);
+
 }
 
 export async function atualizarProduto(id, dados) {
     const atualizarProduto = await Produto.findByPk(id);
         if (!atualizarProduto) throw new Error("Produto não encontrado");
     await atualizarProduto.update(dados);
+    return atualizarProduto;
 
 }
 

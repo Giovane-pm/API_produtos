@@ -2,6 +2,7 @@ import express from "express";
 import { sequelize } from "./db.js";
 import produtoRoutes from "./routes/produtoRoutes.js";
 import { estruturaSwagger } from "./swagger.js";
+import { seedDatabase } from "./seed.js"
 
 
 const app = express();
@@ -21,7 +22,8 @@ async function main() {
         console.log("Sucesso ao Conectar ao MySQL");
         await sequelize.sync();
         console.log("Tabelas Organizadas")
-        
+        await seedDatabase();
+        console.log("Tabelas Populadas")
         app.listen(PORT, () => {
             console.log(`O servidor está rodando na porta ${PORT}`);
         });

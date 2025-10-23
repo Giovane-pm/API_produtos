@@ -5,7 +5,7 @@ export async function criar(req, res) {
     try {
         const dadosValidados = validarProdutoDTO(req.body);
         const novoProduto = await produtoServices.criarProduto(dadosValidados);
-        res.json({ "mensagem": "Produto criado com sucesso" });
+        res.status(200).json(novoProduto);
     } catch (err) {
         res.status(400).json({ erro: err.message });
     }
@@ -35,7 +35,7 @@ export async function atualizar(req, res) {
     try {
         const dadosValidados = validarProdutoDTO(req.body);
         const atualProduto = await produtoServices.atualizarProduto(id, dadosValidados);
-        res.json({ mensagem: "Produto atualizado com sucesso" });
+        res.status(200).json(atualProduto);
     } catch (err) {
         res.status(404).json({ erro: err.message });
     }

@@ -51,8 +51,9 @@ npm start
 A aplicação estará disponível em:  
  **http://localhost:4000**
 
----
+****Observação***: Tabela já contém exemplos de produtos para facilitar os testes da API.
 
+---
 ##  Endpoints da API  
 
 ### **GET** /api/produtos 
@@ -88,7 +89,9 @@ Cria um novo produto.
 ```
 **Resposta:**
 ```json
-{ "mensagem": "Produto criado com sucesso" }
+  "nome": "Monitor 24 polegadas",
+  "preco": 900,
+  "categoria": "Monitores"
 ```
 
 ---
@@ -105,7 +108,11 @@ Atualiza as informações de um produto existente.
 ```
 **Resposta:**
 ```json
-{ "mensagem": "Produto atualizado com sucesso" }
+{
+  "nome": "Monitor 27 polegadas",
+  "preco": 1200,
+  "categoria": "Monitores"
+}
 ```
 
 ---
